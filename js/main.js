@@ -22,7 +22,6 @@ function palindromo (pal) {
 
   for (var i = 0; i < pal.length / 2; i++) {
 
-
     if (pal[i] !== pal[pal.length - 1 - i])
 
     return ('Non è palindromo = ') + pal;
@@ -30,7 +29,7 @@ function palindromo (pal) {
 
     return ('Palindromo = ') + pal;
 
-}
+  }
 
 
 //////////////////// Pari e Dispari
@@ -41,16 +40,22 @@ function palindromo (pal) {
 // Dichiariamo chi ha vinto.
 
 function pariEdispari () {
+
   var pariOdispari = prompt('Pari o Dispari?');
+
   var numeroUser = parseInt( prompt('Numero da 1 a 5') );
 
   var numeroPC = Math.floor( Math.random() * 5) + 1;
+
+
   console.log(numeroPC + ' Numero del PC');
   console.log(numeroUser + ' Numero User');
   console.log(pariOdispari);
 
   var numeroTot = numeroUser + numeroPC;
+
   console.log(numeroTot + ' Somma Totale');
+
     if (numeroTot % 2 == 0 && pariOdispari == 'Pari') {
       console.log('Hai vinto!');
     } else if (numeroTot % 2 != 0 && pariOdispari == 'Dispari') {
