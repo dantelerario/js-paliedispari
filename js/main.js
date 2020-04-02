@@ -14,11 +14,11 @@ function palindromo(pal) {
 
   if (reverse === pal) {
 
-    return ('Sono palindromi');
+    return ('Sono palindromi = ') + reverse + ' = ' + pal;
 
   } else {
 
-    return ('Non sono palindromi');
+    return ('Non sono palindromi = ') + reverse + ' = ' + pal;
 
   }
 
