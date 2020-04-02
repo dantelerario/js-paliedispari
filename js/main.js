@@ -2,35 +2,35 @@
 // Chiedere all’utente di inserire una parola
 // Creare una funzione per capire se la parola inserita è palindroma
 
-// var parola = prompt('Inserire parola');
-//
-// var result = palindromo(parola);
-//
-// console.log(result);
+var parola = prompt('Inserire parola');
 
-// function palindromo(pal) {
-//
-//   // var reverse = pal.split('').reverse().join('');
-//   //
-//   // if (reverse === pal) {
-//   //
-//   //   return ('Palindromo = ') + reverse + ' = ' + pal;
-//   //
-//   // }
-//   //
-//   //   return ('Non è palindromo = ') + reverse + ' = ' + pal;
-//
-//   for (var i = 0; i < pal.length / 2; i++) {
-//
-//
-//     if (pal[i] !== pal[pal.length - 1 - i])
-//
-//     return ('Non è palindromo = ') + pal;
-//   }
-//
-//     return ('Palindromo = ') + pal;
-//
-// }
+var result = palindromo(parola);
+
+console.log(result);
+
+function palindromo (pal) {
+
+  // var reverse = pal.split('').reverse().join('');
+  //
+  // if (reverse === pal) {
+  //
+  //   return ('Palindromo = ') + reverse + ' = ' + pal;
+  //
+  // }
+  //
+  //   return ('Non è palindromo = ') + reverse + ' = ' + pal;
+
+  for (var i = 0; i < pal.length / 2; i++) {
+
+
+    if (pal[i] !== pal[pal.length - 1 - i])
+
+    return ('Non è palindromo = ') + pal;
+  }
+
+    return ('Palindromo = ') + pal;
+
+}
 
 
 //////////////////// Pari e Dispari
@@ -40,24 +40,22 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-var numero = parseInt( prompt('Inserisci numero da 1 a 5') );
+function pariEdispari () {
+  var pariOdispari = prompt('Pari o Dispari?');
+  var numeroUser = parseInt( prompt('Numero da 1 a 5') );
 
-var pariDispari = prompt('Scegli pari o dispari');
+  var numeroPC = Math.floor( Math.random() * 5) + 1;
+  console.log(numeroPC + ' Numero del PC');
+  console.log(numeroUser + ' Numero User');
+  console.log(pariOdispari);
 
-var risultato = pariOdispari();
-
-console.log(risultato);
-
-function pariOdispari() {
-    if (numero < 1 && numero > 5) {
-      var numero = parseInt( prompt('HO DETTO DA 1 a 5!!!') );
+  var numeroTot = numeroUser + numeroPC;
+  console.log(numeroTot + ' Somma Totale');
+    if (numeroTot % 2 == 0 && pariOdispari == 'Pari') {
+      console.log('Hai vinto!');
+    } else if (numeroTot % 2 != 0 && pariOdispari == 'Dispari') {
+      console.log('Hai vinto!');
+    } else {
+      console.log('Hai perso!');
     }
-    // Numero random da 1 a 5
-    var numeroPC = Math.floor( Math.random() * 5) + 1;
-
-    if (numero + numeroPC % 2 == 0) {
-      return ('Vince il pari');
-    }
-
-    return ('Vince il dispari')
 }
