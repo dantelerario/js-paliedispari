@@ -10,15 +10,25 @@ console.log(result);
 
 function palindromo(pal) {
 
-  var reverse = pal.split('').reverse().join('');
+  // var reverse = pal.split('').reverse().join('');
+  //
+  // if (reverse === pal) {
+  //
+  //   return ('Palindromo = ') + reverse + ' = ' + pal;
+  //
+  // }
+  //
+  //   return ('Non è palindromo = ') + reverse + ' = ' + pal;
 
-  if (reverse === pal) {
+  for (var i = 0; i < pal.length / 2; i++) {
 
-    return ('Palindromo = ') + reverse + ' = ' + pal;
 
+    if (pal[i] !== pal[pal.length - 1 - i])
+
+    return ('Non è palindromo = ') + pal;
   }
 
-    return ('Non è palindromo = ') + reverse + ' = ' + pal;
+    return ('Palindromo = ') + pal;
 
 }
 
