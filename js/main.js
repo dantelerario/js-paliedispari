@@ -2,7 +2,7 @@
 // Chiedere all’utente di inserire una parola
 // Creare una funzione per capire se la parola inserita è palindroma
 
-var parola = prompt('Inserire parola');
+var parola = prompt('Inserire parola').trim().toLowerCase();
 
 var result = palindromo(parola);
 
@@ -41,7 +41,7 @@ function palindromo (pal) {
 
 function pariEdispari () {
 
-  var pariOdispari = prompt('Pari o Dispari?');
+  var pariOdispari = prompt('Pari o Dispari?').trim().toLowerCase();
 
   var numeroUser = parseInt( prompt('Numero da 1 a 5') );
 
@@ -56,9 +56,9 @@ function pariEdispari () {
 
   console.log(numeroTot + ' Somma Totale');
 
-    if (numeroTot % 2 == 0 && pariOdispari == 'Pari') {
+    if (numeroTot % 2 == 0 && pariOdispari == 'pari') {
       console.log('Hai vinto!');
-    } else if (numeroTot % 2 != 0 && pariOdispari == 'Dispari') {
+    } else if (numeroTot % 2 != 0 && pariOdispari == 'dispari') {
       console.log('Hai vinto!');
     } else {
       console.log('Hai perso!');
